@@ -26,7 +26,7 @@ int  main()
     int status = 0;
     pid_t ret = 0;
     do{
-      ret = waitpid(-1,&status,WNOHANG);
+      ret = waitpid(-1,&status,0);
       if(ret == 0)
       {
         cout<< "child is running..."<<endl;
